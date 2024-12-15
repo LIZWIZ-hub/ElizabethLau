@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
-    <link rel="stylesheet" href="css/scratch.css">  <!-- Link to overwrite.css -->
+    <link rel="stylesheet" href="css/scratch.css"> <!-- Link to external stylesheet -->
 </head>
 <body>
 
-    <div class="container"> <!-- Added a container div for styling -->
-        <img src="https://thumbor.bigedition.com/margherita-pizza/yOl33g0iCcX0Tiwv7DUrK8a4zfM=/800x600/filters:format(webp):quality(80)/granite-web-prod/79/e5/79e546519bde42739dcd616c9f13d138.jpeg" height="150" alt="Elizabeth with Flag"> 
-        <span class="subheader">
-            <a id="top" href="webbapp.html">Tic-Tac-Toe </a> |
-            <a href="tab.html"> Tableau </a> |
-            <a href="index.html">Fancy Resume Website</a>
-        </span>
-    </div> 
-    <div class="container"> <!-- Added a container div for styling -->
+    <header>
+        <div class="container">
+            <img src="https://thumbor.bigedition.com/margherita-pizza/yOl33g0iCcX0Tiwv7DUrK8a4zfM=/800x600/filters:format(webp):quality(80)/granite-web-prod/79/e5/79e546519bde42739dcd616c9f13d138.jpeg" height="150" alt="Elizabeth with Flag">
+            <nav>
+                <span class="subheader">
+                    <a id="top" href="webbapp.html" aria-label="Go to Tic-Tac-Toe game">Tic-Tac-Toe</a> |
+                    <a href="index.html" aria-label="Go to Fancy Resume Website">Fancy Resume Website</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
         <p>Mission Statement: My goal is to travel the world and try all the different kinds of food</p>
         <p>Here is a list of my favorite foods</p>
         <ol>
@@ -26,11 +30,15 @@
                     <li>Ferro Rocher</li>
                 </ul>
             </li>
-            <p>Watch this <a href="https://www.youtube.com/watch?v=0BVOXg-9iS8" target="_blank" title="youtube.com">youtube video</a> on how Nutella is made</p>
+            <p>Watch this video on how Nutella is made</p>
+            <!-- Embedded YouTube Video -->
+            <div class="youtube-video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0BVOXg-9iS8" title="Nutella making process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <li>Pizza
                 <ul> 
                     <li>Pepperoni</li> 
-                    <li>Margerita</li>
+                    <li>Margarita</li>
                 </ul>
             </li>
             <li>Ice Cream
@@ -41,17 +49,15 @@
                 </ul>
             </li>
         </ol>
-         <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+
+        <!-- Tableau Embedded at the bottom of the page -->
+        <div class="tableau-container">
+            <iframe src="https://lizwiz-hub.github.io/ElizabethLau/tab.html" width="800" height="600" frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+
         <a href="#top">Back to Top</a>
-    </div> 
-   
+    </div>
+
     <footer>
         www.elau.com | &copy; | Elizabeth Lau
     </footer>
