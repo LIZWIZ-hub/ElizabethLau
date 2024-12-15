@@ -98,6 +98,7 @@
             checkWinner();
             if (gameActive) {
                 switchPlayer();
+                updateTurnMessage(); // Update the message after switching players
             }
         }
 
@@ -115,8 +116,6 @@
             if (!board.includes('')) {
                 gameActive = false;
                 document.getElementById('message').textContent = "It's a draw!";
-            } else {
-                document.getElementById('message').textContent = `Player ${currentPlayer}'s turn`;
             }
         }
 
@@ -125,19 +124,24 @@
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // Switch player
         }
 
+        // Function to update the turn message
+        function updateTurnMessage() {
+            document.getElementById('message').textContent = `Player ${currentPlayer}'s turn`;
+        }
+
         // Function to reset the game
         function resetGame() {
             board = ['', '', '', '', '', '', '', '', ''];
             currentPlayer = 'X';
             gameActive = true;
-            document.getElementById('message').textContent = `Player ${currentPlayer}'s turn`;
+            updateTurnMessage(); // Update the message when restarting
             for (let i = 0; i < 9; i++) {
                 document.getElementById(`cell-${i}`).textContent = '';
             }
         }
 
         // Initial message
-        document.getElementById('message').textContent = `Player ${currentPlayer}'s turn`;
+        updateTurnMessage(); // Initial message when the page loads
     </script>
 
 </body>
